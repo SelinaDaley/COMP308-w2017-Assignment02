@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1><%= title %></h1>
+            <form class="form" method="post">
+              <div class="form-group">
+                <label for="NameTextField">Name</label>
+                <input type="text" class="form-control" id="NameTextField"
+                placeholder="Business Contact Name" name="name" value="<%= businesscontacts.Name %>" required>
+              </div>
+              <div class="form-group">
+                <label for="NumberTextField">Number</label>
+                <input type="text" class="form-control" id="NumberTextField"
+                placeholder="Phone Number" name="number" value="<%= businesscontacts.Number %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="EmailTextField">Email</label>
+                <input type="text" class="form-control" id="EmailTextField"
+                placeholder="EmailAdress" name="email" value="<%= businesscontacts.Email %>"  required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/businesscontacts" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
